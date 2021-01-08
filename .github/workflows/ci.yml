@@ -32,4 +32,4 @@ jobs:
 
     - name: Deploy to Heroku
       run: |
-        git push heroku HEAD:master
+        git push heroku HEAD:refs/heads/master
