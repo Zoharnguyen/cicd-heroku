@@ -30,6 +30,18 @@ jobs:
       run: |
         git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
 
+    - name: Config account
+      run: |
+        git config --global user.email "zohardata@gmail.com"
+
+    - name: Add project
+      run: |
+        git add .
+
+    - name: Add project
+      run: |
+        git commit
+
     - name: Deploy to Heroku
       run: |
         git push heroku master
